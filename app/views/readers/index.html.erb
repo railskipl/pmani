@@ -1,0 +1,28 @@
+<h1>Listing readers</h1>
+
+<table>
+  <tr>
+    <th>Reader</th>
+    <th>Sub zone</th>
+    <th>Zone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+
+<% @readers.each do |reader| %>
+  <tr>
+    <td><%= reader.user.name %></td>
+    <td><%= reader.sub_zone_id %></td>
+    <td><%= reader.sub_zone.zone.zone_name %></td>
+    <td><%= link_to 'Show', reader %></td>
+    <td><%= link_to 'Edit', edit_reader_path(reader) %></td>
+    <td><%= link_to 'Destroy', reader, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Reader', new_reader_path %>

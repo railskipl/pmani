@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @consumer.name %>
+</p>
+
+<p>
+  <b>Sub zone:</b>
+  <%= @consumer.sub_zone_id %>
+</p>
+
+<p>
+  <b>Zone:</b>
+  <%= @consumer.zone_id %>
+</p>
+
+<p>
+  <b>Consumer Index Number:</b>
+  <%= @consumer.consumer_inxex_no %>
+</p>
+
+<p>
+  <b>Meter No</b>
+  <%= @consumer.meter_no %>
+</p>
+
+<p>
+  <b>New Meter No:</b>
+  <%= @consumer.new_meter_no %>
+</p>
+
+<p>
+  <b>Walk Id:</b>
+  <%= @consumer.walk_id %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= image_tag @consumer.image.url ,:width => 400, :height => 200 %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_consumer_path(@consumer) %> |
+<%= link_to 'Back', consumers_path %>

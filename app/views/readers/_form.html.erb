@@ -1,0 +1,25 @@
+<%= form_for(@reader) do |f| %>
+  <% if @reader.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reader.errors.count, "error") %> prohibited this reader from being saved:</h2>
+
+      <ul>
+      <% @reader.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.collection_select :user_id, User.all, :id,:name %>
+  </div>
+  <div class="field">
+    <%= f.label :sub_zone_id %><br />
+    <%= f.collection_select :sub_zone_id, SubZone.all, :id,:name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

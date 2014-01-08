@@ -1,0 +1,74 @@
+<%= form_for(@consumer) do |f| %>
+  <% if @consumer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@consumer.errors.count, "error") %> prohibited this consumer from being saved:</h2>
+
+      <ul>
+      <% @consumer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+   <div class="field">
+    <%= f.label :consumer_inxex_no %><br />
+    <%= f.text_field :consumer_inxex_no %>
+  </div>
+   <div class="field">
+    <%= f.label :meter_no %><br />
+    <%= f.text_field :meter_no %>
+  </div>
+   <div class="field">
+    <%= f.label :new_meter_no %><br />
+    <%= f.text_field :new_meter_no %>
+  </div>
+   <div class="field">
+    <%= f.label :current_meter_reading %><br />
+    <%= f.text_field :current_meter_reading %>
+  </div>
+   <div class="field">
+    <%= f.label :meter_status %><br />
+    <%= f.text_field :meter_status %>
+  </div>
+   <div class="field">
+    <%= f.label :meter_status_desc %><br />
+    <%= f.text_field :meter_status_desc %>
+  </div>
+   <div class="field">
+    <%= f.label :remarks %><br />
+    <%= f.text_field :remarks %>
+  </div>
+   <div class="field">
+    <%= f.label :contact_no %><br />
+    <%= f.text_field :contact_no %>
+  </div>
+   <div class="field">
+    <%= f.label :walk_id %><br />
+    <%= f.text_field :walk_id %>
+  </div>
+   <div class="field">
+    <%= f.label :zone_id %><br />
+    <%= f.text_field :zone_id %>
+  </div>
+  <div class="field">
+    <%= f.label :mr_name %><br />
+    <%= f.text_field :mr_name %>
+  </div>
+  <div class="field">
+    <%= f.label :mr_code %><br />
+    <%= f.text_field :mr_code %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sub_zone_id %><br />
+    <%= f.collection_select :sub_zone_id, SubZone.all ,:id,:id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

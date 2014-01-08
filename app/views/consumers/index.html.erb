@@ -1,0 +1,28 @@
+<div class ="container">
+<h3 class="form-signin-heading">Listing Consumers</h3>
+<%= link_to 'New Consumer', new_consumer_path ,:style => "float:left" %>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Sub zone</th>
+    <th>Zone</th>
+    <th colspan=3>Actions </th>
+    
+  </tr>
+
+<% @consumers.each do |consumer| %>
+  <tr>
+    <td><%= consumer.name %></td>
+    <td><%= consumer.sub_zone_id %></td>
+    <td><%= consumer.sub_zone.zone.zone_name rescue nil %></td>
+    <td><%= link_to 'Show', consumer %></td>
+    <td><%= link_to 'Edit', edit_consumer_path(consumer) %></td>
+    <td><%= link_to 'Destroy', consumer, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+</div>
