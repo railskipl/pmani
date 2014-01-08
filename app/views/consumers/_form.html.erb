@@ -15,6 +15,14 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+     <div class="field">
+    <%= f.label :zone_id %><br />
+    <%= f.collection_select :zone_id, Zone.all,:id,:zone_name %>
+  </div>
+    <div class="field">
+    <%= f.label :sub_zone_id %><br />
+    <%= f.collection_select :sub_zone_id, SubZone.all ,:id,:id %>
+  </div>
    <div class="field">
     <%= f.label :consumer_inxex_no %><br />
     <%= f.text_field :consumer_inxex_no %>
@@ -51,10 +59,7 @@
     <%= f.label :walk_id %><br />
     <%= f.text_field :walk_id %>
   </div>
-   <div class="field">
-    <%= f.label :zone_id %><br />
-    <%= f.text_field :zone_id %>
-  </div>
+
   <div class="field">
     <%= f.label :mr_name %><br />
     <%= f.text_field :mr_name %>
@@ -64,10 +69,7 @@
     <%= f.text_field :mr_code %>
   </div>
 
-  <div class="field">
-    <%= f.label :sub_zone_id %><br />
-    <%= f.collection_select :sub_zone_id, SubZone.all ,:id,:id %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
