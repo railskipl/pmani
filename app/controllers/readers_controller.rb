@@ -1,4 +1,6 @@
 class ReadersController < ApplicationController
+ before_filter :authenticate
+ before_filter :correct_user
   # GET /readers
   # GET /readers.json
   def index
@@ -79,5 +81,15 @@ class ReadersController < ApplicationController
       format.html { redirect_to readers_url }
       format.json { head :no_content }
     end
+  end
+
+
+ private
+  def authenticate
+    deny_access unless signed_in?
+  end
+
+  def correct_user
+    redirect_to(root_path) unless current_user.role_id == Role.find(1).id
   end
 end

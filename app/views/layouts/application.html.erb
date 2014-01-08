@@ -16,6 +16,7 @@
     <% if signed_in? %>
 	  <li><%= link_to "Profile", current_user %></li>
 	  <li><%= link_to "Consumers", consumers_path %></li>
+	  <li><%= link_to "Readers", readers_path %></li>
 	<% end %>
 	<% if signed_in? %>
 	  <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
