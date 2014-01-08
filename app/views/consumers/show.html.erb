@@ -31,6 +31,35 @@
 </p>
 
 <p>
+  <b>Current Meter Reading:</b>
+  <%= @consumer.new_meter_no rescue nil  %>
+</p>
+
+<p>
+  <b>Meter Status:</b>
+  <%= @consumer.meter_status rescue nil  %>
+</p>
+
+
+<p>
+  <b>Meter Status Description:</b>
+  <%= @consumer.meter_status_desc rescue nil  %>
+</p>
+
+
+<p>
+  <b>Remarks:</b>
+  <%= @consumer.remarks rescue nil  %>
+</p>
+
+<p>
+  <b>Contact:</b>
+  <%= @consumer.contact_no rescue nil  %>
+</p>
+
+
+
+<p>
   <b>Walk Id:</b>
   <%= @consumer.walk_id rescue nil  %>
 </p>

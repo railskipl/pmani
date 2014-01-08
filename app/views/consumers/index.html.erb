@@ -1,12 +1,26 @@
+<style type="text/css">
+.img1
+{
+width:200px;
+height:200px;
+background-color:gray;
+/* Rotate div */
+transform:rotate(0deg);
+-ms-transform:rotate(0deg); /* IE 9 */
+-webkit-transform:rotate(0deg); /* Safari and Chrome */
+}
+
+</style>
 <div class ="container">
 <h3 class="form-signin-heading">Listing Consumers</h3>
-<%= link_to 'New Consumer', new_consumer_path ,:style => "float:left" %>
+<%#= link_to 'New Consumer', new_consumer_path ,:style => "float:left" %>
 
 <table class="table">
   <tr>
     <th>Name</th>
     <th>Sub zone</th>
     <th>Zone</th>
+    <th>Image</th>
     <th colspan=3>Actions </th>
     
   </tr>
@@ -16,6 +30,7 @@
     <td><%= consumer.name %></td>
     <td><%= consumer.sub_zone_id %></td>
     <td><%= consumer.sub_zone.zone.zone_name rescue nil %></td>
+    <td><%= image_tag consumer.image.url ,:class => "img1" rescue nil %></td>
     <td><%= link_to 'Show', consumer %></td>
     <td><%= link_to 'Edit', edit_consumer_path(consumer) %></td>
     <td><%= link_to 'Destroy', consumer, confirm: 'Are you sure?', method: :delete %></td>

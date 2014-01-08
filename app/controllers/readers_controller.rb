@@ -26,12 +26,13 @@ class ReadersController < ApplicationController
   # GET /readers/new
   # GET /readers/new.json
   def new
-    @reader = Reader.new
+    redirect_to readers_path
+    # @reader = Reader.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @reader }
-    end
+    # respond_to do |format|
+    #   format.html # new.html.erb
+    #   format.json { render json: @reader }
+    # end
   end
 
   # GET /readers/1/edit
