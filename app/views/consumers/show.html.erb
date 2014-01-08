@@ -2,42 +2,42 @@
 
 <p>
   <b>Name:</b>
-  <%= @consumer.name %>
+  <%= @consumer.name rescue nil  %>
 </p>
 
 <p>
   <b>Sub zone:</b>
-  <%= @consumer.sub_zone_id %>
+  <%= @consumer.sub_zone_id rescue nil  %>
 </p>
 
 <p>
   <b>Zone:</b>
-  <%= @consumer.zone_id %>
+  <%= @consumer.zone_id rescue nil  %>
 </p>
 
 <p>
   <b>Consumer Index Number:</b>
-  <%= @consumer.consumer_inxex_no %>
+  <%= @consumer.consumer_inxex_no rescue nil  %>
 </p>
 
 <p>
   <b>Meter No</b>
-  <%= @consumer.meter_no %>
+  <%= @consumer.meter_no rescue nil  %>
 </p>
 
 <p>
   <b>New Meter No:</b>
-  <%= @consumer.new_meter_no %>
+  <%= @consumer.new_meter_no rescue nil  %>
 </p>
 
 <p>
   <b>Walk Id:</b>
-  <%= @consumer.walk_id %>
+  <%= @consumer.walk_id rescue nil  %>
 </p>
 
 <p>
   <b>Image:</b>
-  <%= image_tag @consumer.image.url ,:width => 400, :height => 200 %>
+  <%= image_tag @consumer.image.url ,:width => 400, :height => 200 rescue nil %>
 </p>
 
 
