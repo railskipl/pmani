@@ -27,13 +27,13 @@ class ConsumersController < ApplicationController
   # GET /consumers/new
   # GET /consumers/new.json
   def new
-    redirect_to consumers_path
-    # @consumer = Consumer.new
+    # redirect_to consumers_path
+    @consumer = Consumer.new
 
-    # respond_to do |format|
-    #   format.html # new.html.erb
-    #   format.json { render json: @consumer }
-    # end
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @consumer }
+    end
   end
 
   # GET /consumers/1/edit
