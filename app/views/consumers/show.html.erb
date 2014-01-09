@@ -1,3 +1,99 @@
+
+
+<% content_for :style do %>
+   <%= stylesheet_link_tag "application", "jquery.mCustomScrollbar" ,"common"%>
+<% end %>
+<link href="/assets/jquery.ui.core.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+<link href="/assets/jquery.ui.theme.css?body=1 
+
+
+    <%= javascript_include_tag  "jquery-1.4.2.min","jquery.validate.min.js","custom.js"%>
+
+<div id="loading"></div>
+
+<div id="contentContainer">
+  <div id="content">  
+  
+  
+  
+  
+  
+  <div class="content800_box">
+  
+  <h2 class="underline">Show Page</h2>
+  
+  
+  <table width="100%" cellspacing="0" cellpadding="0" border="1" class="bordered">
+   
+     <tbody>
+  <tr class="odd">
+    <td>Driver  ID: </td>
+    <td><%= @driver.driverID %> </td>
+    </tr>
+  <tr class="odd2">
+    <td>Device  ID: </td>
+    <td> <%= @driver.deviceID %></td>
+    </tr>
+  
+    <tr class="odd">
+      <td>Contact Phone:</td>
+    <td><%= @driver.contactPhone %></td>
+    </tr>
+  
+  <tr class="odd2">
+    <td>Contact Email:</td>
+    <td> <%= @driver.contactEmail %></td>
+    </tr>
+
+
+  <tr class="odd2">
+    <td>License Type:</td>
+    <td> <%= @driver.licenseType %></td>
+    </tr>
+
+
+
+  <tr class="odd2">
+    <td>License Number:</td>
+    <td><%= @driver.licenseNumber %></td>
+    </tr>
+
+
+  <tr class="odd2">
+    <td>License Expire:</td>
+    <td><%= @driver.licenseExpire %></td>
+    </tr>
+
+    <tr class="odd2">
+    <td>Address:</td>
+    <td><%= @driver.address %></td>
+    </tr>
+
+    <tr class="odd2">
+    <td>Birthdate:</td>
+    <td><%= @driver.birthdate %></td>
+    </tr>
+
+     <tr class="odd2">
+    <td>Driver Name:</td>
+    <td><%= @driver.displayName %></td>
+    </tr>
+
+</tbody></table>
+   
+  <%= link_to 'Edit', edit_driver_path,:class => "btn btn-primary" %> |
+   <%= link_to 'Back', drivers_path,:class => "btn" %>
+  </div>
+  
+  
+
+
+
+
+
+
+<!-- 
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -73,3 +169,4 @@
 
 <%= link_to 'Edit', edit_consumer_path(@consumer) %> |
 <%= link_to 'Back', consumers_path %>
+ -->
