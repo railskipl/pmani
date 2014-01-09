@@ -28,7 +28,8 @@ class ReadersController < ApplicationController
   def new
     # redirect_to readers_path
     @reader = Reader.new
-
+    @subzone = []
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @reader }
@@ -38,6 +39,7 @@ class ReadersController < ApplicationController
   # GET /readers/1/edit
   def edit
     @reader = Reader.find(params[:id])
+    @subzone = SubZone.find_all_by_zone_id(@reader.zone_id) 
   end
 
   # POST /readers
@@ -82,6 +84,10 @@ class ReadersController < ApplicationController
       format.html { redirect_to readers_url }
       format.json { head :no_content }
     end
+  end
+  
+  def subzone
+    @subzone = SubZone.find_all_by_zone_id(params[:zone_id]) 
   end
 
 

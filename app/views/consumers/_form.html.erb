@@ -1,3 +1,4 @@
+<%= javascript_include_tag "prototype" %>
 
   <div class="container"> 
           
@@ -39,15 +40,15 @@
                     <label for="inputEmail" class="control-label">
                       Zone ID</label>
                     <div class="controls">
-                          <%= f.collection_select :zone_id, Zone.all,:id,:zone_name %>
+                          <%= f.select :zone_id, Zone.all.map {|c| [c.zone_name, c.id]},{:prompt => "--Select Zone--"}, :onchange => "#{remote_function(:url => {:controller =>"consumers", :action => "subzone"}, :with => "'zone_id='+value")}" %>
                     </div>
                 </div>
         
             <div class="control-group">
                         <label for="inputName" class="control-label">
                            Sub Zone</label>
-                        <div class="controls">
-                            <%= f.collection_select :sub_zone_id, SubZone.all ,:id,:id %>
+                        <div class="controls" id="subzone">
+                            <%= render :partial => "consumers/subzone" %>
                         </div>
             </div>
 
@@ -141,6 +142,31 @@
                                  <%= f.text_field :mr_code %>
                         </div>
             </div>
+            
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Billing Cycle</label>
+                        <div class="controls">
+                                 <%= f.text_field :billing_cycle %>
+                        </div>
+            </div>
+            
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Address</label>
+                        <div class="controls">
+                                 <%= f.text_area :consumer_address, :rows=>5, :cols=>5 %>
+                        </div>
+            </div>
+            
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Category</label>
+                        <div class="controls">
+                                 <%= f.text_field :category %>
+                        </div>
+            </div>
+            
                    
 
                                     
@@ -160,30 +186,5 @@
       <% end %>
 
      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

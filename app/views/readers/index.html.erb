@@ -5,8 +5,8 @@
 <table class="table">
   <tr>
     <th>Reader</th>
-    <th>Sub zone</th>
     <th>Zone</th>
+    <th>Sub zone</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,8 +16,8 @@
 <% @readers.each do |reader| %>
   <tr>
     <td><%= reader.user.name %></td>
-    <td><%= reader.sub_zone_id %></td>
-    <td><%= reader.sub_zone.zone.zone_name %></td>
+    <td><%= Zone.find(reader.zone_id).zone_name rescue nil %></td>
+    <td><%= SubZone.find(reader.sub_zone_id).name rescue nil %></td>
     <td><%= link_to 'Show', reader %></td>
     <td><%= link_to 'Edit', edit_reader_path(reader) %></td>
     <td><%= link_to 'Destroy', reader, confirm: 'Are you sure?', method: :delete %></td>

@@ -6,15 +6,17 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
 
   end
+  
   def new
     @user = User.new
     @title="Sign up"
   end
-    def dashboard
+  
+  def dashboard
       @users = User.all
-   end
+  end
 
-  def create
+ def create
    @user = User.new(params[:user])
    if @user.save 
      sign_in @user
@@ -70,7 +72,12 @@ end
 
    def dtc
     @subzones = Reader.find_all_by_user_id(params[:id])
-    @subzones1 = Hash["allocated_subzones" => @subzones]
+    values = Array.new
+    @subzones.each do |subzone|
+      values.push("user_id" => subzone.user_id, "sub_zone_id"=> subzone.sub_zone_id, "sub_zone_name"=> SubZone.find(subzone.sub_zone_id).name, "zone_id"=> subzone.zone_id, "zone_name" => Zone.find(subzone.zone_id).zone_name)
+    end
+    
+    @subzones1 = Hash["allocated_subzones" => values]
     render :json => @subzones1 
   end
      

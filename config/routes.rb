@@ -1,8 +1,12 @@
 DemoCloud::Application.routes.draw do 
  
-  resources :consumers
+  resources :consumers do
+    post "subzone", :on=> :collection
+  end
 
-  resources :readers
+  resources :readers do
+    post "subzone", :on=> :collection
+  end
 
 get "password_resets/new"
 

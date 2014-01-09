@@ -1,4 +1,4 @@
-
+<%= javascript_include_tag "prototype" %>
   <div class="container"> 
           
       <%= form_for(@reader, :html => { :class => "form-horizontal" }) do |f| %>           
@@ -36,14 +36,21 @@
                           <%= f.collection_select :user_id, User.all, :id,:name %>
                     </div>
                 </div>
+                
+                <div class="control-group">
+                    <label for="inputEmail" class="control-label">
+                      Zone ID</label>
+                    <div class="controls">
+                          <%= f.select :zone_id, Zone.all.map {|c| [c.zone_name, c.id]},{:prompt => "--Select Zone--"}, :onchange => "#{remote_function(:url => {:controller =>"readers", :action => "subzone"}, :with => "'zone_id='+value")}" %>
+                    </div>
+                </div>
         
-            <div class="control-group">
-                        <label for="inputName" class="control-label">
-                           Sub Zone</label>
-                        <div class="controls">
-                            <%= f.collection_select :sub_zone_id, SubZone.all ,:id,:id %>
-                        </div>
-            </div>
+                <div class="control-group">
+                    <label for="inputName" class="control-label">Sub Zone</label>
+                    <div class="controls" id="subzone">
+                        <%= render :partial => "readers/subzone" %>
+                    </div>
+                </div>
 
 
                                     
