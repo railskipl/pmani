@@ -1,25 +1,117 @@
-<%= form_for(@reader) do |f| %>
-  <% if @reader.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@reader.errors.count, "error") %> prohibited this reader from being saved:</h2>
+<%= javascript_include_tag "prototype" %>
+  <div class="container"> 
+          
+      <%= form_for(@reader, :html => { :class => "form-horizontal" }) do |f| %>           
+          
+          <div class="widget stacked ">
+            
+            <div class="widget-header">
+              <i class="icon-pencil"></i>
+              <h3>Editing Reader</h3>
+          </div> 
+        
+        <div class="widget-content">
+        
+        <div style="margin-bottom:10px" class="row-fluid">         
+          
+          </div>
+                
+            <% if @reader.errors.any? %>
+            <div id="error_explanation">
+            <h2><%= pluralize(@reader.errors.count, "error") %> prohibited this reader from being saved:</h2>
 
-      <ul>
-      <% @reader.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+            <ul>
+            <% @reader.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+            </ul>
+            </div>
+            <% end %>
+                
+               
+                <div class="control-group">
+                    <label for="inputEmail" class="control-label">
+                      User ID</label>
+                    <div class="controls">
+                          <%= f.collection_select :user_id, User.all, :id,:name %>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <label for="inputEmail" class="control-label">
+                      Zone ID</label>
+                    <div class="controls">
+                          <%= f.select :zone_id, Zone.all.map {|c| [c.zone_name, c.id]},{:prompt => "--Select Zone--"}, :onchange => "#{remote_function(:url => {:controller =>"readers", :action => "subzone"}, :with => "'zone_id='+value")}" %>
+                    </div>
+                </div>
+        
+                <div class="control-group">
+                    <label for="inputName" class="control-label">Sub Zone</label>
+                    <div class="controls" id="subzone">
+                        <%= render :partial => "readers/subzone" %>
+                    </div>
+                </div>
+
+
+                                    
+
+            <div class="control-group">
+                        <div class="controls">
+                            <button class="btn btn-primary" type="submit">
+                                Submit</button>&nbsp;
+                            
+                        </div>
+            </div>
+
+
+          
+            <%= link_to 'Show', @reader %> |
+            <%= link_to 'Back', readers_path %>
+      </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.collection_select :user_id, User.all, :id,:name %>
-  </div>
-  <div class="field">
-    <%= f.label :sub_zone_id %><br />
-    <%= f.collection_select :sub_zone_id, SubZone.all, :id,:name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

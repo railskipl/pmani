@@ -13,13 +13,13 @@ transform:rotate(0deg);
 </style>
 <div class ="container">
 <h3 class="form-signin-heading">Listing Consumers</h3>
-<%#= link_to 'New Consumer', new_consumer_path ,:style => "float:left" %>
+<%= link_to 'New Consumer', new_consumer_path ,:style => "float:left" %>
 
 <table class="table">
   <tr>
     <th>Name</th>
-    <th>Sub zone</th>
     <th>Zone</th>
+    <th>Sub zone</th>
     <th>Image</th>
     <th colspan=3>Actions </th>
     
@@ -28,8 +28,8 @@ transform:rotate(0deg);
 <% @consumers.each do |consumer| %>
   <tr>
     <td><%= consumer.name %></td>
-    <td><%= consumer.sub_zone_id %></td>
     <td><%= consumer.sub_zone.zone.zone_name rescue nil %></td>
+    <td><%= consumer.sub_zone.name rescue nil %></td>
     <td><%= image_tag consumer.image.url ,:class => "img1" rescue nil %></td>
     <td><%= link_to 'Show', consumer %></td>
     <td><%= link_to 'Edit', edit_consumer_path(consumer) %></td>
@@ -39,5 +39,9 @@ transform:rotate(0deg);
 </table>
 
 <br />
+
+<%= link_to "Excel", consumers_path(params.merge(format: "xls")) %>
+
+<%= link_to "PDF", consumers_path(params.merge(format: "pdf")) %>
 
 </div>

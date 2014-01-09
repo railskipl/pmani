@@ -1,78 +1,190 @@
 <%= javascript_include_tag "prototype" %>
 
-<%= form_for(@consumer) do |f| %>
-  <% if @consumer.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@consumer.errors.count, "error") %> prohibited this consumer from being saved:</h2>
+  <div class="container"> 
+          
+      <%= form_for(@consumer, :html => { :class => "form-horizontal" }) do |f| %>           
+          
+          <div class="widget stacked ">
+            
+            <div class="widget-header">
+              <i class="icon-pencil"></i>
+              <h3>Editing Consumer</h3>
+          </div> 
+        
+        <div class="widget-content">
+        
+        <div style="margin-bottom:10px" class="row-fluid">         
+          
+          </div>
+                
+            <% if @consumer.errors.any? %>
+            <div id="error_explanation">
+            <h2><%= pluralize(@consumer.errors.count, "error") %> prohibited this consumer from being saved:</h2>
 
-      <ul>
-      <% @consumer.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+            <ul>
+            <% @consumer.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+            </ul>
+            </div>
+            <% end %>
+                <div class="control-group">
+                    <label for="inputName" class="control-label">
+                        Name</label>
+                    <div class="controls">
+                         <%= f.text_field :name %>
+                    </div>
+                </div>
+               
+                <div class="control-group">
+                    <label for="inputEmail" class="control-label">
+                      Zone ID</label>
+                    <div class="controls">
+                          <%= f.select :zone_id, Zone.all.map {|c| [c.zone_name, c.id]},{:prompt => "--Select Zone--"}, :onchange => "#{remote_function(:url => {:controller =>"consumers", :action => "subzone"}, :with => "'zone_id='+value")}" %>
+                    </div>
+                </div>
+        
+            <div class="control-group">
+                        <label for="inputName" class="control-label">
+                           Sub Zone</label>
+                        <div class="controls" id="subzone">
+                            <%= render :partial => "consumers/subzone" %>
+                        </div>
+            </div>
+
+
+            <div class="control-group">
+                        <label for="inputName" class="control-label">
+                           Consumner Inxex No</label>
+                        <div class="controls">
+                           <%= f.text_field :consumer_inxex_no %>
+         
+                        </div>
+            </div>
+            
+                   
+            <div class="control-group">
+                        <label for="inputName" class="control-label">
+                            Meter Number</label>
+                        <div class="controls">
+                            <%= f.text_field :meter_no %>
+                        </div>
+            </div>
+
+            <div class="control-group">
+                        <label for="inputBirthdate" class="control-label">
+                            New Meter Number</label>
+                        <div class="controls">
+                           <%= f.text_field :new_meter_no %>
+                        </div>
+            </div>
+            
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                            Current Meter Reading</label>
+                        <div class="controls">
+                           <%= f.text_field :current_meter_reading %>
+                        </div>
+            </div>
+            
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Meter Status</label>
+                        <div class="controls">
+                                 <%= f.text_field :meter_status %>
+                        </div>
+            </div>
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Meter Status Desc</label>
+                        <div class="controls">
+                                 <%= f.text_field :meter_status_desc %>
+                        </div>
+            </div>
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Remarks</label>
+                        <div class="controls">
+                                 <%= f.text_field :remarks %>
+                        </div>
+            </div>
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Contact Number</label>
+                        <div class="controls">
+                                 <%= f.text_field :contact_no %>
+                        </div>
+            </div>
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Walk ID</label>
+                        <div class="controls">
+                                 <%= f.text_field :walk_id %>
+                        </div>
+            </div>
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          mr_name</label>
+                        <div class="controls">
+                                 <%= f.text_field :mr_name %>
+                        </div>
+            </div>
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          mr_code</label>
+                        <div class="controls">
+                                 <%= f.text_field :mr_code %>
+                        </div>
+            </div>
+            
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Billing Cycle</label>
+                        <div class="controls">
+                                 <%= f.text_field :billing_cycle %>
+                        </div>
+            </div>
+            
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Address</label>
+                        <div class="controls">
+                                 <%= f.text_area :consumer_address, :rows=>5, :cols=>5 %>
+                        </div>
+            </div>
+            
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Category</label>
+                        <div class="controls">
+                                 <%= f.text_field :category %>
+                        </div>
+            </div>
+            
+                   
+
+                                    
+
+            <div class="control-group">
+                        <div class="controls">
+                            <button class="btn btn-primary" type="submit">
+                                Submit</button>&nbsp;
+                            
+                        </div>
+            </div>
+
+
+          <%= link_to 'Show', @consumer %> |
+          <%= link_to 'Back', consumers_path %>
+      </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-     <div class="field">
-    <%= f.label :zone_id %><br />
-    <%= f.select :zone_id, Zone.all.map {|c| [c.zone_name, c.id]},{:prompt => "--Select Zone--"}, :onchange => "#{remote_function(:url => {:controller =>"consumers", :action => "subzone"}, :with => "'zone_id='+value")}" %>
-    
-  </div>
-    <div class="field" id="subzone">
-    <%= render :partial => "consumers/subzone" %>
-  </div>
-   <div class="field">
-    <%= f.label :consumer_inxex_no %><br />
-    <%= f.text_field :consumer_inxex_no %>
-  </div>
-   <div class="field">
-    <%= f.label :meter_no %><br />
-    <%= f.text_field :meter_no %>
-  </div>
-   <div class="field">
-    <%= f.label :new_meter_no %><br />
-    <%= f.text_field :new_meter_no %>
-  </div>
-   <div class="field">
-    <%= f.label :current_meter_reading %><br />
-    <%= f.text_field :current_meter_reading %>
-  </div>
-   <div class="field">
-    <%= f.label :meter_status %><br />
-    <%= f.text_field :meter_status %>
-  </div>
-   <div class="field">
-    <%= f.label :meter_status_desc %><br />
-    <%= f.text_field :meter_status_desc %>
-  </div>
-   <div class="field">
-    <%= f.label :remarks %><br />
-    <%= f.text_field :remarks %>
-  </div>
-   <div class="field">
-    <%= f.label :contact_no %><br />
-    <%= f.text_field :contact_no %>
-  </div>
-   <div class="field">
-    <%= f.label :walk_id %><br />
-    <%= f.text_field :walk_id %>
-  </div>
-
-  <div class="field">
-    <%= f.label :mr_name %><br />
-    <%= f.text_field :mr_name %>
-  </div>
-  <div class="field">
-    <%= f.label :mr_code %><br />
-    <%= f.text_field :mr_code %>
-  </div>
+     </div>
 
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>

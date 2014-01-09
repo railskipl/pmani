@@ -2,26 +2,31 @@
 <div class="container">
 
 
-<div class="container">
-<%= form_for(@user, :html => {:class => "form-signin"}) do |f| %>
+<%= form_for(@user, :html => {:class => "login-fields"}) do |f| %>
+
+<div class="account-container stacked">  
+  <div class="content clearfix">
+
       
 <%= render 'shared/error_messages', :object => f.object %>
         <h2 class="form-signin-heading">Sign Up</h2>
-             <div class="control-group">
+
+
+             <div class="field">
                     <div class="input-prepend">
                        
                        <%= f.text_field :name ,:placeholder=>"Name"%>
                     </div>
                 </div>
 
-                <div class="control-group">
+                <div class="field">
                     <div class="input-prepend">
                        
                        <%= f.text_field :email ,:placeholder=>"Email"%>
                     </div>
                 </div>
 
-                <div class="control-group">
+                <div class="field">
                     <div class="input-prepend">
                         
                        <%= f.text_field :username,:placeholder=>"Username" %>
@@ -29,7 +34,7 @@
                 </div>
 
 
-                <div class="control-group">
+                <div class="field">
                     <div class="input-prepend">
                         
                        <%= f.password_field :password,:placeholder=>"Password" %>
@@ -37,7 +42,7 @@
                 </div>
 
 
-                <div class="control-group">
+                <div class="field">
                     <div class="input-prepend">
                         
                        <%= f.password_field :password_confirmation,:placeholder=>"Confirmation" %>

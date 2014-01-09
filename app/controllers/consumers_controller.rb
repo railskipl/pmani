@@ -9,6 +9,10 @@ class ConsumersController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.xls
+      format.pdf do
+         render :pdf => "file_name"
+       end
       format.json { render json: @consumers }
     end
   end
@@ -46,6 +50,7 @@ class ConsumersController < ApplicationController
   # POST /consumers.json
   def create
     if params["device"] == "mobile" 
+
       reading = {}
       packet = params["Packet1"].split("%")
       reading["name"] = packet[0]
@@ -63,7 +68,12 @@ class ConsumersController < ApplicationController
       reading["zone_id"] = packet[12]
       reading["mr_code"] = packet[13]
       reading["mr_name"] = packet[14]
+      reading["billing_cycle"] = packet[15]
+      reading["consumer_address"] = packet[16]
+      reading["category"] = packet[17]
       reading["image"] = params["uploaded"]
+      reading["latitude"] = params["lat"]
+      reading["longitude"] = params["lng"]
 
       @consumer = Consumer.create(reading)
       render :status =>200 ,:json => @consumer.to_json
@@ -105,7 +115,12 @@ class ConsumersController < ApplicationController
       reading["zone_id"] = packet[12]
       reading["mr_code"] = packet[13]
       reading["mr_name"] = packet[14]
+      reading["billing_cycle"] = packet[15]
+      reading["consumer_address"] = packet[16]
+      reading["category"] = packet[17]
       reading["image"] = params["uploaded"]
+      reading["latitude"] = params["lat"]
+      reading["longitude"] = params["lng"]
 
       @consumer.update_attributes(reading)
       render :status =>200 ,:json => @consumer.to_json
@@ -152,7 +167,6 @@ class ConsumersController < ApplicationController
   
   def subzone
     @subzone = SubZone.find_all_by_zone_id(params[:zone_id]) 
-
   end
   
 

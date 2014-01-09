@@ -1,8 +1,12 @@
 <div class="container">
 
-      <%= form_tag(password_resets_path, :method => :post, :html => {:class => "form-signin"}) do  %>
+      <%= form_tag(password_resets_path, :method => :post, :html => {:class => "login-fields"}) do  %>
+
+      <div class="account-container stacked">  
+      <div class="content clearfix">    
+      
         
-        <div class="control-group">
+                <div class="field">
                     <div class="input-prepend">
                        
                        <%= text_field_tag :email%>

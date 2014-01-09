@@ -1,0 +1,39 @@
+<style type="text/css">
+.img1
+{
+width:200px;
+height:200px;
+background-color:gray;
+/* Rotate div */
+transform:rotate(0deg);
+-ms-transform:rotate(0deg); /* IE 9 */
+-webkit-transform:rotate(0deg); /* Safari and Chrome */
+}
+
+</style>
+<div class ="container">
+<h3 class="form-signin-heading">Listing Consumers</h3>
+
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Zone</th> 
+    <th>Sub zone</th>   
+    <th>Image</th> 
+  </tr>
+
+<% @consumers.each do |consumer| %>
+  <tr>
+    <td><%= consumer.name %></td>
+    <td><%= consumer.sub_zone.zone.zone_name rescue nil %></td>
+    <td><%= consumer.sub_zone.name rescue nil %></td>
+     <td><%= image_tag consumer.image.url %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+</div>
