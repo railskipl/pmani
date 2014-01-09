@@ -6,14 +6,15 @@
 </p>
 
 <p>
-  <b>Sub zone:</b>
-  <%= @consumer.sub_zone_id rescue nil  %>
+  <b>Zone:</b>
+  <%= Zone.find(@consumer.zone_id).zone_name rescue nil  %>
 </p>
 
 <p>
-  <b>Zone:</b>
-  <%= @consumer.zone_id rescue nil  %>
+  <b>Sub zone:</b>
+  <%= SubZone.find(@consumer.sub_zone_id).name rescue nil  %>
 </p>
+
 
 <p>
   <b>Consumer Index Number:</b>

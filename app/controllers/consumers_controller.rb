@@ -29,7 +29,7 @@ class ConsumersController < ApplicationController
   def new
     # redirect_to consumers_path
     @consumer = Consumer.new
-
+    @subzone = []
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @consumer }
@@ -39,6 +39,7 @@ class ConsumersController < ApplicationController
   # GET /consumers/1/edit
   def edit
     @consumer = Consumer.find(params[:id])
+    @subzone = SubZone.find_all_by_zone_id(@consumer.zone_id) 
   end
 
   # POST /consumers
@@ -147,6 +148,13 @@ class ConsumersController < ApplicationController
         format.json { render json: @dtc1 }
     end
   end
+  
+  
+  def subzone
+    @subzone = SubZone.find_all_by_zone_id(params[:zone_id]) 
+
+  end
+  
 
  private
   def authenticate

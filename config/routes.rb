@@ -1,6 +1,8 @@
 DemoCloud::Application.routes.draw do 
  
-  resources :consumers
+  resources :consumers do
+    post "subzone", :on=> :collection
+  end
 
   resources :readers
 

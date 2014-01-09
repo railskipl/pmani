@@ -1,3 +1,5 @@
+<%= javascript_include_tag "prototype" %>
+
 <%= form_for(@consumer) do |f| %>
   <% if @consumer.errors.any? %>
     <div id="error_explanation">
@@ -17,11 +19,11 @@
   </div>
      <div class="field">
     <%= f.label :zone_id %><br />
-    <%= f.collection_select :zone_id, Zone.all,:id,:zone_name %>
+    <%= f.select :zone_id, Zone.all.map {|c| [c.zone_name, c.id]},{:prompt => "--Select Zone--"}, :onchange => "#{remote_function(:url => {:controller =>"consumers", :action => "subzone"}, :with => "'zone_id='+value")}" %>
+    
   </div>
-    <div class="field">
-    <%= f.label :sub_zone_id %><br />
-    <%= f.collection_select :sub_zone_id, SubZone.all ,:id,:id %>
+    <div class="field" id="subzone">
+    <%= render :partial => "consumers/subzone" %>
   </div>
    <div class="field">
     <%= f.label :consumer_inxex_no %><br />
