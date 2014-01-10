@@ -8,14 +8,15 @@
             
             <div class="widget-header">
               <i class="icon-pencil"></i>
-              <!-- <h3>Editing Consumer</h3> -->
+              <h3>Editing Consumer</h3>
           </div> 
         
         <div class="widget-content">
         
-        <div style="margin-bottom:10px" class="row-fluid">         
-          
-          </div>
+        <td><%= link_to "Show",@consumer, :class=>"btn" %>
+                      <%= link_to "Back",consumers_path, :class=>"btn" %>
+                  </td> 
+
                 
             <% if @consumer.errors.any? %>
             <div id="error_explanation">
@@ -178,10 +179,8 @@
                             
                         </div>
             </div>
-
-
-          <%= link_to 'Show', @consumer %> |
-          <%= link_to 'Back', consumers_path %>
+                  
+          
       </div>
       <% end %>
 

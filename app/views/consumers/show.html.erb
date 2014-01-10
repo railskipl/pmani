@@ -13,7 +13,7 @@
             
             <div class="widget-header">
               <i class="icon-pencil"></i>
-              <!-- <h3>Show Reading</h3> -->
+              <h3>Show Reading</h3>
           </div> <!-- /widget-header -->
         
         <div class="widget-content">
@@ -92,9 +92,10 @@
                     <td>Image</td>
                     <td> <%= image_tag @consumer.image.url ,:width => 400, :height => 200 rescue nil %></td>
                     </tr>
-                  
-                      <%= link_to 'Edit', edit_consumer_path(@consumer) %> |
-                      <%= link_to 'Back', consumers_path %>
+                      <td><%= link_to "Edit",edit_consumer_path(@consumer), :class=>"btn" %>
+                      <%= link_to "Back",consumers_path, :class=>"btn" %>
+                      </td>
+                      
                     </tbody>
             </table>         
                   

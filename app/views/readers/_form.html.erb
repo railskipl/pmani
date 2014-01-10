@@ -7,7 +7,7 @@
             
             <div class="widget-header">
               <i class="icon-pencil"></i>
-              <!-- <h3>Editing Reader</h3> -->
+              <h3>Editing Reader</h3>
           </div> 
         
         <div class="widget-content">
@@ -63,10 +63,11 @@
                         </div>
             </div>
 
-
+                  <td><%= link_to "Show",@reader, :class=>"btn" %>
+                      <%= link_to "Back",readers_path, :class=>"btn" %>
+                  </td> 
           
-            <%= link_to 'Show', @reader %> |
-            <%= link_to 'Back', readers_path %>
+            
       </div>
       <% end %>
 
