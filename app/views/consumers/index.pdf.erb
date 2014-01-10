@@ -26,7 +26,7 @@ transform:rotate(0deg);
 <% @consumers.each do |consumer| %>
   <tr>
     <td><%= consumer.name %></td>
-    <td><%= consumer.sub_zone.zone.zone_name rescue nil %></td>
+    <td><%= consumer.zone.zone_name rescue nil %></td>
     <td><%= consumer.sub_zone.name rescue nil %></td>
      <td><%= image_tag consumer.image.url %></td>
   </tr>
