@@ -14,7 +14,7 @@
             
             <div class="widget-header">
               <i class="icon-pencil"></i>
-              <h3>Show Reading</h3>
+              <h3>Show Reader</h3>
           </div> <!-- /widget-header -->
         
         <div class="widget-content">
@@ -33,13 +33,17 @@
                   
                   <tr>
                         <td>User:</td>
-                        <td><%= @reader.user_id %></td>                
-                 
+                        <td><%= @reader.user.name rescue nil %></td>                
+                  </tr>
+                  
+                  <tr>
+                        <td>Zone:</td>
+                        <td><%= @reader.zone.zone_name rescue nil %></td>                
                   </tr>
                   
                   <tr>
                         <td>Sub zone:</td>
-                        <td> <%= @reader.sub_zone_id  %> </td>
+                        <td> <%= @reader.sub_zone.name rescue nil  %> </td>
                   </tr>                 
                   
                 </tbody>
