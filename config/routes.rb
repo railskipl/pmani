@@ -17,7 +17,10 @@ get "password_resets/new"
 
 match '/change_password', :controller => 'users', :action => 'change_password'
 
-  resources :users 
+  resources :users do
+    get 'zone_json', :on=> :collection
+    get 'sub_zone_json', :on=> :collection
+  end
  
   resources :sessions, :only => [:new,:create,:destroy,:edit]
   root :to => 'sessions#new'
