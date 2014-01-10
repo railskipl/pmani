@@ -70,7 +70,7 @@ end
    end
 
 
-   def dtc
+  def dtc
     @subzones = Reader.find_all_by_user_id(params[:id])
     values = Array.new
     @subzones.each do |subzone|
@@ -80,10 +80,20 @@ end
     @subzones1 = Hash["allocated_subzones" => values]
     render :json => @subzones1 
   end
-     
+  
 
-    
-    
+  def zone_json
+    @zones = Zone.all
+    @zones = Hash["zones" => @zones]
+     render :json => @zones   
+  end
+  
+  def sub_zone_json
+    @sub_zones = SubZone.all
+    @sub_zones = Hash["sub_zones" => @sub_zones]
+     render :json => @sub_zones
+  end
+     
   private
   def authenticate
     deny_access unless signed_in?
