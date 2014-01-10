@@ -76,7 +76,7 @@
                   <tr>
                         <td>Name:</td>
                         <td><%= @consumer.name rescue nil  %></td>
-                        <td rowspan="13" align="left" valign="top" style="text-align:center; vertical-align: top;">
+                        <td rowspan="18" align="left" valign="top" style="text-align:center; vertical-align: top;">
                       
                         <% unless @consumer.image.url.nil? %>
                         <%= image_tag @consumer.image.url,:width => 400, :height => 400 rescue nil %>
@@ -91,14 +91,16 @@
                   </tr>
                   
                   <tr>
-                        <td>Sub zone:</td>
-                        <td> <%= @consumer.sub_zone_id rescue nil  %> </td>
-                        </tr>
+                        <td>Zone:</td>
+                        <td> <%= @consumer.zone.zone_name rescue nil  %></td>
+                  </tr>
                   
                   <tr>
-                        <td>Zone:</td>
-                        <td> <%= @consumer.zone_id rescue nil  %></td>
-                        </tr>
+                        <td>Sub zone:</td>
+                        <td> <%= @consumer.sub_zone.name rescue nil  %> </td>
+                  </tr>
+                  
+                  
 
                         <tr>
                         <td>Consumer Index Number:</td>
@@ -106,11 +108,11 @@
                         </tr>
                   
                   <tr>
-                        <td>Meter No</td>
+                        <td>Meter Number</td>
                         <td><%= @consumer.meter_no rescue nil  %></td>
                         </tr>
                   <tr>
-                    <td>New Meter No:</td>
+                    <td>New Meter Number:</td>
                    <td> <%= @consumer.new_meter_no rescue nil  %></td>
 
                     </tr>
@@ -129,11 +131,43 @@
                   <tr>
                     <td>Remarks</td>
                     <td> <%= @consumer.remarks rescue nil  %></td>
-                    </tr>
+                  </tr>
+                  
                   <tr>
-                    <td>Contact</td>
+                    <td>Contact Number</td>
                     <td><%= @consumer.contact_no rescue nil  %></td>
                   </tr>
+                  
+                  <tr>
+                    <td>Walk ID</td>
+                    <td><%= @consumer.walk_id rescue nil  %></td>
+                  </tr>
+                  
+                   <tr>
+                      <td>Mr Name</td>
+                      <td><%= @consumer.mr_name rescue nil  %></td>
+                    </tr>
+                  
+                  <tr>
+                    <td>MR Code</td>
+                    <td><%= @consumer.mr_code rescue nil  %></td>
+                  </tr>
+                  
+                  <tr>
+                    <td>Billing Cycle</td>
+                    <td><%= @consumer.billing_cycle rescue nil  %></td>
+                  </tr>
+                  
+                  <tr>
+                    <td>Address</td>
+                    <td><%= @consumer.consumer_address rescue nil  %></td>
+                  </tr>
+                  
+                  <tr>
+                    <td>Category</td>
+                    <td><%= @consumer.category rescue nil  %></td>
+                  </tr>
+                  
                 
                   </tr>
                       <td colspan="2"><%= link_to "Edit",edit_consumer_path(@consumer), :class=>"btn" %>
