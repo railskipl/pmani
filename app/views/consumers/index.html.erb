@@ -10,7 +10,7 @@
           <div class="span6" style="text-align:right">
           <a href="#" class="btn btn-secondary"><img src="img/excel.png" alt=""> Excel</a> <a href="#" class="btn btn-secondary"><i class="icon"><img src="img/pdf.png" alt=""></i> PDF</a>
           </div>
-          <%= link_to 'New Consumer', new_consumer_path ,:style => "float:left" %>
+          
           
           
           </div>
@@ -33,13 +33,15 @@
               <td><%= consumer.sub_zone_id %></td>
               <td><%= consumer.sub_zone.zone.zone_name rescue nil %></td>
               <td><%= image_tag consumer.image.url ,:class => "img1" rescue nil %></td>
-               <!-- <td><a href="show" class="btn btn-primary">Show</a> -->
+              
               <td><%= link_to 'Show', consumer %></td>
               <td><%= link_to 'Edit', edit_consumer_path(consumer) %></td>
               <td><%= link_to 'Destroy', consumer, confirm: 'Are you sure?', method: :delete %></td>
             </tr>
-          <% end %>
-            </table>          
+           <% end %>
+          </table>  
+
+            <%= link_to 'New Consumer', new_consumer_path ,:style => "float:left" %>        
           
         </div> <!-- /widget-content -->
           
