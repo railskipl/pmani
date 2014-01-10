@@ -64,6 +64,7 @@ body{ color:#838383; font: 13px/1.7em 'Open Sans';}
 
 .password-field { background: url(/assets/img/signin/password.png) no-repeat; }
 
+.email-field { background: url(/assets/img/signin/email.png) no-repeat; }
 
 
 
@@ -253,6 +254,7 @@ span.login-checkbox > input[type='checkbox']:checked + label {
 	
 }
 
-.email-field {
+/*.email-field {
     background: url("/assets/img/signin/email.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
+*/
