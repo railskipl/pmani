@@ -48,23 +48,26 @@ end
     @user = User.find(current_user.id)
 
     if request.post?
-      if User.authenticate(@user.email,
-        params[:change_password][:old_password]) == @user
-        @user.password = params[:change_password][:new_password]
-        @user.password_confirmation =
-        params[:change_password][:new_password_confirmation]
+      if User.authenticate(@user.username, params[:change_password][:old_password])
+          if ((params[:change_password][:new_password] == params[:change_password][:new_password_confirmation]) && !params[:change_password][:new_password_confirmation].blank?)
+            @user.password = params[:change_password][:new_password]
 
-          if @user.save
-            flash[:notice] = 'Password successfully updated!'
-            redirect_to change_password_path
-          else
-            flash[:error] = 'New password mismatch.'
+              if @user.save!
+                flash[:notice] = "Password successfully updated"
+                redirect_to change_password_path
+              else
+                flash[:alert] = "Password not changed"
+                render :action => 'change_password'
+              end
+
+            else
+              flash[:alert] = "New Password Mismatch" 
+              render :action => 'change_password'
+            end
+        else
+            flash[:alert] = "Old Password Incorrect" 
             render :action => 'change_password'
-          end
-      else
-          flash[:error] = 'Old password incorrect'
-          render :action => 'change_password'
-      end
+        end
     end
 
    end

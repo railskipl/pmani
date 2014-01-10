@@ -43,8 +43,8 @@
 <% @readers.each do |reader| %>
   <tr>
     <td><%= reader.user.name %></td>
-    <td><%= Zone.find(reader.zone_id).zone_name rescue nil %></td>
-    <td><%= SubZone.find(reader.sub_zone_id).name rescue nil %></td>
+    <td><%= reader.zone.zone_name rescue nil %></td>
+    <td><%= reader.sub_zone.name rescue nil %></td>
     <td>
       <%= link_to "Show",reader, :class=>"btn" %>
       <%= link_to "Edit", main_app.edit_reader_path(reader), :class=>"btn" %>
@@ -56,7 +56,7 @@
 <% end %>
 </table>
  
-
+<%= will_paginate @readers,renderer: BootstrapPagination::Rails %>
 
 <br />
 </div>

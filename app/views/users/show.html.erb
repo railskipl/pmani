@@ -49,7 +49,7 @@
 
 
                   <tr>                   
-                      <a href="/users/<%= current_user.id%>/edit"class="btn" >Edit</a>    
+                      
                       <td>
                      <%= link_to "Change Password",main_app.change_password_path, :class=>"btn" %>
                      </td>
@@ -69,40 +69,5 @@
     
 </div> <!-- /main -->
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-
- <table class="profile" summary="Profile Information"> 
-	<tr>
-		<td class ="main">
-			
-
-			</td>
-			<td class="sidebar round">
-				<strong>User Name </strong>    <%= current_user.name %><br/>
-				<strong> Email  </strong>  <%= current_user.email %><br/><br/>
-				
-				<a href="/users/<%= current_user.id%>/edit" >Edit</a><br>
-				<%= link_to 'change password', change_password_path%>
-			</td>
-	</tr>
-
- -->
 
 
