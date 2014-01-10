@@ -14,22 +14,22 @@
 
              <div class="field">
                     <div class="input-prepend">
+                        
+                       <%= f.text_field :name ,:placeholder=>"Name", :class=>"login username-field" %>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="input-prepend">
                        
-                       <%= f.text_field :name ,:placeholder=>"Name"%>
-                    </div>
-                </div>
-
-                <div class="field">
-                    <div class="input-prepend">
-                       
-                       <%= f.text_field :email ,:placeholder=>"Email"%>
+                       <%= f.text_field :email ,:placeholder=>"Email",:class=>"login email-field" %>
                     </div>
                 </div>
 
                 <div class="field">
                     <div class="input-prepend">
                         
-                       <%= f.text_field :username,:placeholder=>"Username" %>
+                       <%= f.text_field :username,:placeholder=>"Username",:class=>"login username-field" %>
                     </div>
                 </div>
 
@@ -37,7 +37,7 @@
                 <div class="field">
                     <div class="input-prepend">
                         
-                       <%= f.password_field :password,:placeholder=>"Password" %>
+                       <%= f.password_field :password,:placeholder=>"Password", :class=>"login password-field" %>
                     </div>
                 </div>
 
@@ -45,7 +45,7 @@
                 <div class="field">
                     <div class="input-prepend">
                         
-                       <%= f.password_field :password_confirmation,:placeholder=>"Confirmation" %>
+                       <%= f.password_field :password_confirmation,:placeholder=>"Confirmation" , :class=>"login password-field"%>
                     </div>
                 </div>
 
