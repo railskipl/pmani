@@ -17,7 +17,7 @@ upgrading in the future easier. ***
 [ Global ]
 */
 body {
-  background: #fff url(../img/tiny_grid.png) repeat 0 0;
+  background: #fff url(/assets/img/tiny_grid.png) repeat 0 0;
   font: 13px 'Open Sans';
 }
 .clearfix {
@@ -474,7 +474,7 @@ h6 {
   z-index: 2;
   width: 25px;
   height: 16px;
-  background: url(../img/jquery/handle.png) no-repeat;
+  background: url(/assets/img/jquery/handle.png) no-repeat;
   border: none;
   cursor: pointer;
 }
@@ -579,7 +579,7 @@ h6 {
   margin-bottom: -0.6em;
   width: 15px;
   height: 24px;
-  background: url(../img/jquery/handle-vertical.png) no-repeat;
+  background: url(/assets/img/jquery/handle-vertical.png) no-repeat;
 }
 .ui-slider-vertical .ui-slider-handle:hover {
   background-position: 0 -24px;
@@ -643,7 +643,7 @@ h6 {
   display: inline-block;
   width: 15px;
   height: 15px;
-  background: url(../img/validation/validation-success.png) no-repeat 0 0;
+  background: url(/assets/img/validation/validation-success.png) no-repeat 0 0;
 }
 .control-group.success input + div.clean,
 .control-group.success select + div.clean,
@@ -857,34 +857,34 @@ h6 {
   padding-left: 90px;
 }
 .jquery-msgbox-alert {
-  background: url(../img/notifications/alert-48.png) no-repeat 21px 20px;
+  background: url(/assets/img/notifications/alert-48.png) no-repeat 21px 20px;
 }
 .jquery-msgbox-info {
-  background: url(../img/notifications/info-48.png) no-repeat 21px 20px;
+  background: url(/assets/img/notifications/info-48.png) no-repeat 21px 20px;
 }
 .jquery-msgbox-error {
-  background: url(../img/notifications/error-48.png) no-repeat 21px 20px;
+  background: url(/assets/img/notifications/error-48.png) no-repeat 21px 20px;
 }
 .jquery-msgbox-prompt {
-  background: url(../img/notifications/question-dark-48.png) no-repeat 20px 20px;
+  background: url(/assets/img/notifications/question-dark-48.png) no-repeat 20px 20px;
 }
 .jquery-msgbox-confirm {
-  background: url(../img/notifications/question-48.png) no-repeat 20px 20px;
+  background: url(/assets/img/notifications/question-48.png) no-repeat 20px 20px;
 }
 /*------------------------------------------------------------------
 [ Growl / .msgGrowl ]
 */
 .msgGrowl.success .msgGrowl-content {
-  background: url(../img/notifications/success-32.png) no-repeat 7px 13px;
+  background: url(/assets/img/notifications/success-32.png) no-repeat 7px 13px;
 }
 .msgGrowl.error .msgGrowl-content {
-  background: url(../img/notifications/error-32.png) no-repeat 7px 13px;
+  background: url(/assets/img/notifications/error-32.png) no-repeat 7px 13px;
 }
 .msgGrowl.info .msgGrowl-content {
-  background: url(../img/notifications/info-32.png) no-repeat 7px 13px;
+  background: url(/assets/img/notifications/info-32.png) no-repeat 7px 13px;
 }
 .msgGrowl.warning .msgGrowl-content {
-  background: url(../img/notifications/alert-32.png) no-repeat 7px 13px;
+  background: url(/assets/img/notifications/alert-32.png) no-repeat 7px 13px;
 }
 /*------------------------------------------------------------------
 [ Back to Top / #back-to-top ]
@@ -1566,7 +1566,7 @@ body:not(:-moz-handler-blocked) .dropdown-submenu > a:after {
   width: 184px;
   height: 120px;
   background-color: rgba(0, 0, 0, 0.65);
-  background-image: url(../img/gallery/zoom.png);
+  background-image: url(/assets/img/gallery/zoom.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   -webkit-border-radius: 3px;
