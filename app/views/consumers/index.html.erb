@@ -41,8 +41,8 @@
             <thead>
              <tr>
               <th>Name</th>
-              <th>Sub zone</th>
               <th>Zone</th>
+              <th>Sub zone</th>
               <th>Image</th>
               <th colspan=3>Actions </th>              
              </tr>
@@ -52,9 +52,9 @@
           <% @consumers.each do |consumer| %>
             <tr>
               <td><%= consumer.name %></td>
-              <td><%= consumer.sub_zone_id %></td>
               <td><%= consumer.sub_zone.zone.zone_name rescue nil %></td>
-              <td><%= image_tag consumer.image.url ,:class => "img1" rescue nil %></td>
+              <td><%= consumer.sub_zone.name rescue nil %></td>
+              <td><%= image_tag consumer.image.url,:width => 410,:height=> 400 rescue nil %></td>
               <td>
               <%= link_to "Show",consumer, :class=>"btn" %>
               <%= link_to "Edit", main_app.edit_consumer_path(consumer), :class=>"btn" %>
