@@ -16,6 +16,8 @@ gem 'fog'
 gem "prototype-rails"
 gem 'wkhtmltopdf-binary'
 gem 'wicked_pdf'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
