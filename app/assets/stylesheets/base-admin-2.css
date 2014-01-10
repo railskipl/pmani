@@ -100,6 +100,7 @@ h6 {
 */
 .navbar.navbar-fixed-top {
   position: static;
+  margin-bottom: 2.5em;
 }
 .navbar .container {
   position: relative;
@@ -673,6 +674,7 @@ h6 {
   line-height: 40px;
   background: #E9E9E9;
   background: -moz-linear-gradient(top, #fafafa 0%, #e9e9e9 100%);
+  text-align: left;
   /* FF3.6+ */
 
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #e9e9e9));
@@ -706,7 +708,7 @@ h6 {
   position: relative;
   left: 10px;
   display: inline-block;
-  margin-right: 72em;
+  margin-right: 3em;
   font-size: 14px;
   font-weight: 600;
   color: #555;
@@ -1295,14 +1297,14 @@ body:not(:-moz-handler-blocked) .dropdown-submenu > a:after {
   background-color: #9e5f00 \9;
 }
 .btn-secondary {
-  color: #ffffff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #ffffff!important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)!important;
   background-color: #535353;
-  background-image: -moz-linear-gradient(top, #626262, #3e3e3e);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#626262), to(#3e3e3e));
-  background-image: -webkit-linear-gradient(top, #626262, #3e3e3e);
-  background-image: -o-linear-gradient(top, #626262, #3e3e3e);
-  background-image: linear-gradient(to bottom, #626262, #3e3e3e);
+  background-image: -moz-linear-gradient(top, #626262, #3e3e3e)!important;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#626262), to(#3e3e3e))!important;
+  background-image: -webkit-linear-gradient(top, #626262, #3e3e3e)!important;
+  background-image: -o-linear-gradient(top, #626262, #3e3e3e)!important;
+  background-image: linear-gradient(to bottom, #626262, #3e3e3e)!important;
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff626262', endColorstr='#ff3e3e3e', GradientType=0);
   border-color: #3e3e3e #3e3e3e #181818;
@@ -1318,7 +1320,7 @@ body:not(:-moz-handler-blocked) .dropdown-submenu > a:after {
 .btn-secondary.disabled,
 .btn-secondary[disabled] {
   color: #ffffff;
-  background-color: #3e3e3e;
+  background-color: #3e3e3e!important;
   *background-color: #313131;
 }
 .btn-secondary:active,
