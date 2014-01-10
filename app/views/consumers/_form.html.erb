@@ -8,14 +8,12 @@
             
             <div class="widget-header">
               <i class="icon-pencil"></i>
-              <h3>Editing Consumer</h3>
+              <h3>New Consumer</h3>
           </div> 
         
         <div class="widget-content">
         
-        <td><%= link_to "Show",@consumer, :class=>"btn" %>
-                      <%= link_to "Back",consumers_path, :class=>"btn" %>
-                  </td> 
+                  
 
                 
             <% if @consumer.errors.any? %>
@@ -168,17 +166,18 @@
                         </div>
             </div>
             
-                   
-
                                     
 
             <div class="control-group">
                         <div class="controls">
                             <button class="btn btn-primary" type="submit">
                                 Submit</button>&nbsp;
-                            
+                            <td><%= link_to "Show",@consumer, :class=>"btn " %>
+                           <%= link_to "Back",consumers_path, :class=>"btn " %>
+                  </td>  
                         </div>
             </div>
+
                   
           
       </div>
