@@ -14,7 +14,7 @@
             
             <div class="widget-header">
               <i class="icon-pencil"></i>
-              <!-- <h3>Profile</h3> -->
+              <h3>Profile</h3>
           </div> <!-- /widget-header -->
         
         <div class="widget-content">
@@ -44,10 +44,15 @@
                   
                     </tbody>
             </table> 
+                       
+                
+
 
                   <tr>                   
-                      <a href="/users/<%= current_user.id%>/edit" >Edit</a>    
-                      <br><%= link_to 'change password', change_password_path%>          
+                      <a href="/users/<%= current_user.id%>/edit"class="btn" >Edit</a>    
+                      <td>
+                     <%= link_to "Change Password",main_app.change_password_path, :class=>"btn" %>
+                     </td>
                   </tr>        
                   
           </section>   

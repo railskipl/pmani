@@ -39,14 +39,16 @@
               <td>
               <%= link_to "Show",consumer, :class=>"btn" %>
               <%= link_to "Edit", main_app.edit_consumer_path(consumer), :class=>"btn" %>
-              <%= link_to "Destroy",consumer,confirm: 'Are you sure?', method: :delete, :class=>"btn" %>
+              <%= link_to "Destroy",consumer,confirm: 'Are you sure?', :method =>:delete, :class=>"btn" %>
               </td>
               
               
             </tr>
            <% end %>
           </table>  
-            <td><%= link_to "New Consumer", main_app.new_consumer_path, :class=>"btn",:style => "float:left" %></td>
+           <td>
+            <%= link_to "New Consumer", main_app.new_consumer_path, :class=>"btn",:style => "float:left" %>
+           </td>
                    
           
         </div> <!-- /widget-content -->
