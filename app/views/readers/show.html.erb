@@ -1,16 +1,89 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>User:</b>
-  <%= @reader.user_id %>
-</p>
-
-<p>
-  <b>Sub zone:</b>
-  <%= @reader.sub_zone_id %>
-</p>
 
 
-<%= link_to 'Edit', edit_reader_path(@reader) %> |
-<%= link_to 'Back', readers_path %>
- 
+    
+    
+<div class="main">
+
+    <div class="container">
+
+      <div class="row">
+        
+    <div class="span12">          
+          
+          <div class="widget stacked ">
+            
+            <div class="widget-header">
+              <i class="icon-pencil"></i>
+              <h3>Show Reading</h3>
+          </div> <!-- /widget-header -->
+        
+        <div class="widget-content">
+        
+        
+        <section id="tables">
+          
+          
+          
+          
+          
+          <table class="table table-bordered table-striped" style="width:50%" >
+                    
+                    <tbody>
+                      
+                  
+                  
+                  <tr>
+                        <td>User:</td>
+                        <td><%= @reader.user_id %></td>
+
+                  
+                 
+                        </tr>
+                  
+                  <tr>
+                        <td>Sub zone:</td>
+                        <td> <%= @reader.sub_zone_id  %> </td>
+                        </tr>
+                  
+                  
+                    <%= link_to 'Edit', edit_reader_path(@reader) %> |
+					<%= link_to 'Back', readers_path %>
+                    </tbody>
+            </table>         
+                  
+          </section>   
+          
+        </div> <!-- /widget-content -->
+          
+      </div> <!-- /widget -->
+          
+      </div>
+        
+      </div> <!-- /row -->
+
+    </div> <!-- /container -->
+    
+</div> <!-- /main -->
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
