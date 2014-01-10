@@ -17,7 +17,7 @@ upgrading in the future easier. ***
 [ Global ]
 */
 body {
-  background: #fff url(../img/tiny_grid.png) repeat 0 0;
+  background: #fff url(/assets/img/tiny_grid.png) repeat 0 0;
   font: 13px 'Open Sans';
 }
 .clearfix {
