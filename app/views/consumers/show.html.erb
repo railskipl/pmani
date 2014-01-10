@@ -28,10 +28,13 @@
           <table class="table table-bordered table-striped">
                     
                     <tbody>
-                      <tr>
-                        <td>Meter reading</td>
-                        <td>12345.0</td>
-                        <td rowspan="14" align="left" valign="top" style="text-align:center; vertical-align: top;">
+                      
+                  
+                  
+                  <tr>
+                        <td>Name:</td>
+                        <td><%= @consumer.name rescue nil  %></td>
+                        <td rowspan="13" align="left" valign="top" style="text-align:center; vertical-align: top;">
                   <img src="img/large.jpg" alt="" width="400" height="400">
                   <div class="map_container">
                   
@@ -39,12 +42,6 @@
                   
                   </div>
                   </td>
-                        </tr>
-                  
-                  
-                  <tr>
-                        <td>Name:</td>
-                        <td><%= @consumer.name rescue nil  %></td>
                         </tr>
                   
                   <tr>
@@ -96,21 +93,12 @@
                     <td> <%= image_tag @consumer.image.url ,:width => 400, :height => 200 rescue nil %></td>
                     </tr>
                   
-<%= link_to 'Edit', edit_consumer_path(@consumer) %> |
-<%= link_to 'Back', consumers_path %>
+                      <%= link_to 'Edit', edit_consumer_path(@consumer) %> |
+                      <%= link_to 'Back', consumers_path %>
                     </tbody>
-            </table>   
+            </table>         
                   
-                 
-
-            
-            
-                  
-          </section>
-                
-            
-          
-          
+          </section>   
           
         </div> <!-- /widget-content -->
           
