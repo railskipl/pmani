@@ -1,5 +1,6 @@
 <div class="container">
 
+<% unless signed_in? %>
 <%= form_for(:session, :url => sessions_path, :html => {:class => "login-fields"}) do |f| %>
 
 <div class="account-container stacked">
@@ -41,4 +42,7 @@
         <button type="submit" class="btn btn-large btn-primary">Sign in</button>
     
     <% end %>
-    </div>
+    
+    <% end %>
+
+</div>
