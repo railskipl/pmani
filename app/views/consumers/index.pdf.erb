@@ -28,7 +28,7 @@ transform:rotate(0deg);
     <td><%= consumer.name %></td>
     <td><%= consumer.zone.zone_name rescue nil %></td>
     <td><%= consumer.sub_zone.name rescue nil %></td>
-     <td><%= image_tag consumer.image.url, :width=>"100" rescue nil %></td>
+     <td><%= image_tag consumer.image.url, :width=>"100" %></td>
   </tr>
 <% end %>
 </table>
