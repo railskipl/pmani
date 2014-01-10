@@ -9,7 +9,7 @@ class ConsumersController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      #format.xls
+      format.xls
       format.pdf do
          render :pdf => "consumer"
        end
