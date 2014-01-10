@@ -8,7 +8,10 @@
           </div>
           
           <div class="span6" style="text-align:right">
-          <a href="#" class="btn btn-secondary"><img src="img/excel.png" alt=""> Excel</a> <a href="#" class="btn btn-secondary"><i class="icon"><img src="img/pdf.png" alt=""></i> PDF</a>
+          <%= link_to "Excel", consumers_path(params.merge(format: "xls")) %>
+          <%= link_to image_tag('/assets/excel.png') + "Excel", consumers_path(params.merge(format: "xls")), :class => 'btn btn-secondary' %>
+          <%= link_to image_tag('/assets/pdf.png') + "PDF", consumers_path(params.merge(format: "pdf")), :class => 'btn btn-secondary' %>
+          
           </div>
           <%= link_to 'New Consumer', new_consumer_path ,:style => "float:left" %>
           

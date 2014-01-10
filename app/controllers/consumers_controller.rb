@@ -11,7 +11,7 @@ class ConsumersController < ApplicationController
       format.html # index.html.erb
       #format.xls
       format.pdf do
-         render :pdf => "file_name"
+         render :pdf => "consumer"
        end
       format.json { render json: @consumers }
     end
