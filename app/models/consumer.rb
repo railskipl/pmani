@@ -5,5 +5,6 @@ class Consumer < ActiveRecord::Base
   				  :billing_cycle, :consumer_address, :category, :latitude, :longitude
   				  
  belongs_to :sub_zone
+ belongs_to :zone
  mount_uploader :image, ImageUploader
 end

@@ -5,7 +5,7 @@ class ConsumersController < ApplicationController
   # GET /consumers
   # GET /consumers.json
   def index
-    @consumers = Consumer.all
+    @consumers = Consumer.paginate(:page => params[:page], :per_page => 5, :order => 'id DESC')
 
     respond_to do |format|
       format.html # index.html.erb
