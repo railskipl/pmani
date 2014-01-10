@@ -54,7 +54,7 @@
               <td><%= consumer.name %></td>
               <td><%= consumer.zone.zone_name rescue nil %></td>
               <td><%= consumer.sub_zone.name rescue nil %></td>
-              <td><% unless consumer.image.url.nil? %><%= image_tag consumer.image.url,:width => 280 rescue nil %> <% else %> No Image <% end %></td>
+              <td><% unless consumer.image.url.nil? %><%= image_tag consumer.image.url, :width=>"200" rescue nil %> <% else %> No Image <% end %></td>
               <td>
               <%= link_to "Show",consumer, :class=>"btn" %>
               <%= link_to "Edit", main_app.edit_consumer_path(consumer), :class=>"btn" %>
