@@ -10,13 +10,15 @@
           
           <div class="widget stacked ">
             
+
+
             <div class="widget-header">
               <i class="icon-pencil"></i>
-               Listing Readers
+               <h3>Listing Readers</h3>
             </div>
 
             <div class="widget-content">
-        
+        <td><%= link_to "New Reader", main_app.new_reader_path, :class=>"btn btn-secondary",:style => "float:left" %></td>
         
          <section id="tables">     
           
@@ -53,7 +55,7 @@
   </tr>
 <% end %>
 </table>
- <td><%= link_to "New Reader", main_app.new_reader_path, :class=>"btn",:style => "float:left" %></td>
+ 
 
 
 <br />
