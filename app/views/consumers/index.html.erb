@@ -58,7 +58,7 @@
               <td><%= consumer.sub_zone.name rescue nil %></td>
               <td><%= consumer.consumer_inxex_no rescue nil %></td>
               <td><%= consumer.current_meter_reading rescue nil %></td>
-              <td><% unless consumer.image.url.nil? %><%= image_tag consumer.image.url, :width=>"100" rescue nil %> <% else %> No Image <% end %></td>
+              <td><% unless consumer.image.url.nil? %><%= image_tag consumer.image.url, :width=>"50" rescue nil %> <% else %> No Image <% end %></td>
               <td>
               
                <!-- <%= button_to "Accept", consumers_path, :method => "post" %>  -->
