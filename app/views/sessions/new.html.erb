@@ -1,5 +1,6 @@
 <div class="container">
 
+
 <% unless signed_in? %>
 <%= form_for(:session, :url => sessions_path, :html => {:class => "login-fields"}) do |f| %>
 
@@ -46,7 +47,13 @@
     <% end %>
     
     <% else %>
-      <h2>Dashboard Page </h2>
+       <% if current_user.role_id == 1 %>
+         <h4> Paste Super User content here .......... </h4>
+       <% elsif current_user.role_id == 3 %>
+         <h4> Paste SPM user content here .......... </h4>
+       <% else %>
+        <h2>Dashboard Page </h2>
+      <% end %>
     <% end %>
 
 </div>
