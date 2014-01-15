@@ -31,6 +31,9 @@ match '/change_password', :controller => 'users', :action => 'change_password'
   match '/signout', :to =>'sessions#destroy'
  resources :password_resets
  
+ match '/consumers/:id/accept/:id2', :to => "consumers#accept"
+ match '/consumers/:id/reject/:id2', :to => "consumers#reject"
+ 
  match '/edu_class/:id/status', :to => "edu_classes#toggled_status"
  match '/edu_classes/:id/delete', :to => "edu_classes#destroy"
   match '/subjects/:id/delete', :to => "subjects#destroy"

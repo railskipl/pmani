@@ -1,12 +1,12 @@
 class ConsumersController < ApplicationController
- before_filter :authenticate, :only => [:index,:show]
- before_filter :correct_user, :only => [:index,:show]
+ before_filter :authenticate, :only => [:index,:show, :accept, :reject]
+ before_filter :correct_user, :only => [:index,:show, :accept, :reject]
 
   # GET /consumers
   # GET /consumers.json
   def index
   
-    @consumers = Consumer.paginate(:page => params[:page], :per_page => 10, :conditions=>"actions != 2", :order => 'updated_at DESC') #action = 2 means reject consumer
+    @consumers = Consumer.paginate(:page => params[:page], :per_page => 10, :order => 'updated_at DESC') #action = 2 means reject consumer
 
     respond_to do |format|
       format.html # index.html.erb
@@ -163,6 +163,13 @@ class ConsumersController < ApplicationController
         format.html
         format.json { render json: @dtc1 }
     end
+  end
+  
+  
+  def accept
+  end
+  
+  def reject
   end
   
   
