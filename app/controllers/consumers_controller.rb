@@ -167,9 +167,17 @@ class ConsumersController < ApplicationController
   
   
   def accept
+    consumer = Consumer.find(params[:id])
+    consumer.actions = 2
+    consumer.save!
+    redirect_to consumers_path
   end
   
   def reject
+    consumer = Consumer.find(params[:id])
+    consumer.actions = 3
+    consumer.save!
+    redirect_to consumers_path
   end
   
   

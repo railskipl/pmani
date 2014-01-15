@@ -2,6 +2,8 @@ DemoCloud::Application.routes.draw do
  
   resources :consumers do
     post "subzone", :on=> :collection
+    get "accept", :on=> :member
+    get "reject", :on=> :member
   end
 
   resources :readers do
@@ -30,9 +32,6 @@ match '/change_password', :controller => 'users', :action => 'change_password'
   match  '/users/:id/edit',  :to => "users#edit" 
   match '/signout', :to =>'sessions#destroy'
  resources :password_resets
- 
- match '/consumers/:id/accept/:id2', :to => "consumers#accept"
- match '/consumers/:id/reject/:id2', :to => "consumers#reject"
  
  match '/edu_class/:id/status', :to => "edu_classes#toggled_status"
  match '/edu_classes/:id/delete', :to => "edu_classes#destroy"
