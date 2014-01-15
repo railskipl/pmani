@@ -60,11 +60,12 @@
               <td><%= consumer.current_meter_reading rescue nil %></td>
               <td><% unless consumer.image.url.nil? %><%= image_tag consumer.image.url, :width=>"35" rescue nil %> <% else %> No Image <% end %></td>
               <td>
-            
+
                <% if consumer.actions == 1 %>
                <%= link_to "Accept", accept_consumer_path(consumer), :class=>"btn" %> <%= link_to "Reject", reject_consumer_path(consumer), :class=>"btn" %> 
                <% end %>
               <%= link_to "Edit", main_app.edit_consumer_path(consumer), :class=>"btn" %> 
+
               
               </td>
               

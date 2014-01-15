@@ -42,14 +42,14 @@
                   </tr>
                   
                   <tr>
-                        <td>Sub zone:</td>
+                        <td>MRU:</td>
                         <td> <%= @reader.sub_zone.name rescue nil  %> </td>
                   </tr>                 
                   
                 </tbody>
             </table>  
 
-                  <td><%= link_to "Edit",edit_reader_path(@reader), :class=>"btn" %>
+                  <td><%= link_to "Edit",edit_reader_path(@reader), :class=>"btn btn-success" %>
                       <%= link_to "Back",readers_path, :class=>"btn" %>
                   </td>       
                   

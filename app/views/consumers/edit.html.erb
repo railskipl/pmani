@@ -1,4 +1,201 @@
+<%= javascript_include_tag "prototype" %>
+
+  <div class="container"> 
+          
+      <%= form_for(@consumer, :html => { :class => "form-horizontal" }) do |f| %>           
+          
+          <div class="widget stacked ">
+            
+            <div class="widget-header">
+              <i class="icon-pencil"></i>
+              <h3>New Consumer</h3>
+          </div> 
+        
+        <div style="margin-bottom: 80px;" class="widget-content">
+        
+                  
+
+                
+            <% if @consumer.errors.any? %>
+            <div id="error_explanation">
+            <h2><%= pluralize(@consumer.errors.count, "error") %> prohibited this consumer from being saved:</h2>
+
+            <ul>
+            <% @consumer.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+            </ul>
+            </div>
+            <% end %>
+                
+               
+                <div class="control-group">
+                    <label for="inputEmail" class="control-label">
+                      Zone ID</label>
+                    <div class="controls">
+                          <%= f.select :zone_id, Zone.all.map {|c| [c.zone_name, c.id]},{:prompt => "--Select Zone--"}, :onchange => "#{remote_function(:url => {:controller =>"consumers", :action => "subzone"}, :with => "'zone_id='+value")}", :disabled=>true %>
+                    </div>
+                </div>
+        
+            <div class="control-group">
+                        <label for="inputName" class="control-label">
+                           MRU</label>
+                        <div class="controls" id="subzone">
+                            <%= render :partial => "consumers/subzone" %>
+                        </div>
+            </div>
 
 
-<%= render 'form' %>
+            
+            <div class="control-group">
+                        <label for="inputBirthdate" class="control-label">
+                            New Meter Number</label>
+                        <div class="controls">
+                           <%= f.text_field :new_meter_no %>
+                        </div>
+            </div>
+            
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                            Current Meter Reading</label>
+                        <div class="controls">
+                           <%= f.text_field :current_meter_reading %>
+                        </div>
+            </div>
+
+
+             <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Remarks</label>
+                        <div class="controls">
+                                 <%= f.text_field :remarks %>
+                        </div>
+            </div>
+
+            <div class="control-group">
+                    <label for="inputName" class="control-label">
+                      Name</label>
+                    <div class="controls">
+                         <%= f.text_field :name, :disabled=>true %>               
+                    </div>
+                </div>
+
+
+             <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Consumer Index No.</label>
+                        <div class="controls">
+                                 <%= f.text_field :consumer_inxex_no, :disabled=>true %>
+                        </div>
+            </div>
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Meter No.</label>
+                        <div class="controls">
+                                 <%= f.text_field :meter_no, :disabled=>true %>
+                        </div>
+            </div>
+
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Meter Status</label>
+                        <div class="controls">
+                                 <%= f.text_field :meter_status, :disabled=>true %>
+                        </div>
+            </div>
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Meter Status Desc</label>
+                        <div class="controls">
+                                <%= f.text_field :meter_status_desc, :disabled=>true %>
+                        </div>
+            </div>
+
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Contact No.</label>
+                        <div class="controls">
+                                <%= f.text_field :contact_no, :disabled=>true %>
+                        </div>
+            </div>
+
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Walk ID</label>
+                        <div class="controls">
+                                <%= f.text_field :walk_id , :disabled=>true%>
+                        </div>
+            </div>
+
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          mr_name</label>
+                        <div class="controls">
+                                <%= f.text_field :mr_name, :disabled=>true %>
+                        </div>
+            </div>
+
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          mr_code</label>
+                        <div class="controls">
+                                <%= f.text_field :mr_code, :disabled=>true %>
+                        </div>
+            </div>
+
+
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Billing Cycle</label>
+                        <div class="controls">
+                                <%= f.text_field :billing_cycle , :disabled=>true%>
+                        </div>
+            </div>
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Consumer Adress</label>
+                        <div class="controls">
+                               <%= f.text_field :consumer_address, :rows=>5, :cols=>5 , :disabled=>true%>
+                        </div>
+            </div>
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Category</label>
+                        <div class="controls">
+                               <%= f.text_field :category, :disabled=>true %>
+                        </div>
+            </div>
+
+
+
+            
+                                    
+
+            <div class="control-group">
+                        <div class="controls">
+                            <button class="btn btn-primary" type="submit">
+                                Submit</button>&nbsp;
+                            <td>
+                           <%= link_to "Back",consumers_path, :class=>"btn " %>
+                  </td>  
+                        </div>
+            </div>
+
+                  
+          
+      </div>
+      <% end %>
+
+     </div>
+
 
