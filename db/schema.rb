@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(:version => 20140115101431) do
   create_table "consumers", :force => true do |t|
     t.string   "name"
     t.integer  "sub_zone_id"
-    t.datetime "created_at",            :null => false
-    t.datetime "updated_at",            :null => false
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
     t.string   "consumer_inxex_no"
     t.string   "meter_no"
     t.string   "new_meter_no"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(:version => 20140115101431) do
     t.string   "category"
     t.float    "latitude"
     t.float    "longitude"
-    t.integer  "actions"
+    t.integer  "actions",               :default => 1
   end
 
   create_table "readers", :force => true do |t|

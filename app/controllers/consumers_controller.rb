@@ -6,7 +6,7 @@ class ConsumersController < ApplicationController
   # GET /consumers.json
   def index
   
-    @consumers = Consumer.paginate(:page => params[:page], :per_page => 10, :order => 'updated_at DESC') #action = 2 means reject consumer
+    @consumers = Consumer.paginate(:page => params[:page], :per_page => 10, :conditions=>"actions != 3", :order => 'updated_at DESC') #actions = 3 means reject consumer
 
     respond_to do |format|
       format.html # index.html.erb
