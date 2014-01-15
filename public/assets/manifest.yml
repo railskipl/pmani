@@ -31,7 +31,6 @@ img/jquery/handle-vertical.png: img/jquery/handle-vertical-b63d9e5f1caad7ef90367
 img/jquery/handle.png: img/jquery/handle-6479218d94de25c2204fbd8c41517f46.png
 img/lightbox/4.jpg: img/lightbox/4-b6103e53547591438550aa7f45d9f72b.jpg
 img/lightbox/Thumbs.db: img/lightbox/Thumbs-b7d272fbe30fb0fe322ccf4448949c43.db
-img/logo.png: img/logo-e7efa8c8bb92069dcf7f6e03c85e3ea6.png
 img/meter_readers_tatus.png: img/meter_readers_tatus-a155fe19e2d864c11bdcc0b10c22a0a1.png
 img/meter_status.png: img/meter_status-633032d6815ca8f07f411638d7bbd240.png
 img/mobile.png: img/mobile-02e2ab53b75860dfdc5940b2c1006e17.png
@@ -51,6 +50,7 @@ img/reading.png: img/reading-c9edc8c128fad905ffc464d8434c1ca6.png
 img/report.png: img/report-8dd852eade5a0d88b42a974371abb7ca.png
 img/signin/Thumbs.db: img/signin/Thumbs-fce35db8aaffce638ad35ae8a2088027.db
 img/signin/check.png: img/signin/check-ffb812fdff50d2e109776df70079e772.png
+img/signin/email.png: img/signin/email-f89f254f0a91327a7302840dfe18791c.png
 img/signin/fb_btn.png: img/signin/fb_btn-b4ca8d80704388d7af92691d7ffa150f.png
 img/signin/password.png: img/signin/password-b56ea10fecbb027bba63006c55a4298d.png
 img/signin/twitter_btn.png: img/signin/twitter_btn-929469e6abd5a4f96a149479c37c940c.png
@@ -60,13 +60,13 @@ img/team.png: img/team-553cd132727852567b8ea8ecc1a959d5.png
 img/tiny_grid.png: img/tiny_grid-22b841444d04602d66a1a3efe8af49e9.png
 img/validation/Thumbs.db: img/validation/Thumbs-195d3929e495dd26353cd4f5d39b6a80.db
 img/validation/validation-success.png: img/validation/validation-success-a5b4c26057fb82fa1e6129e367c6524e.png
-logo.png: logo-e02550a0169ad7d032b9b8be7db77bbf.png
+logo.png: logo-d89d2c56129f23b12401bf22e98a82d9.png
 password.png: password-b56ea10fecbb027bba63006c55a4298d.png
 rails.png: rails-be8732dac73d845ac5b142c8fb5f9fb0.png
 tiny_grid.png: tiny_grid-22b841444d04602d66a1a3efe8af49e9.png
 user.png: user-641bf63e326069e11f9a2c95e68afc5f.png
 application.js: application-28d8959d750a1a350b6133486dcf484c.js
-application.css: application-93dc53c6c9c8dab331ab1c7f29c8bb29.css
+application.css: application-188b7bbcdc1e4ac4d714ffba10a2fc6f.css
 ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png: ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40-cd069760cfdad8cc220b573aebacc6c7.png
 ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png: ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40-df77f173e58e0776f2055c113e04c38b.png
 ui-lightness/images/ui-bg_flat_10_000000_40x100.png: ui-lightness/images/ui-bg_flat_10_000000_40x100-c12165592cf51d81e4160200a87e6574.png

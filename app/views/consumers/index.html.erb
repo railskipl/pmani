@@ -24,12 +24,12 @@
           
           <div class="row-fluid" style="margin-bottom:10px">
           <td>
-            <%= link_to "New Consumer", main_app.new_consumer_path, :class=>"btn btn-secondary",:style => "float:left" %>
+            <%= link_to "New Consumer", main_app.new_consumer_path, :class=>"btn btn-success",:style => "float:left" %>
            </td>
           <div class="span10" style="text-align:right">
           
-          <%= link_to image_tag('/assets/img/excel.png') + " Excel", consumers_path(params.merge(format: "xls")), :class => 'btn btn-secondary' %>
-          <%= link_to image_tag('/assets/img/pdf.png') + " PDF", consumers_path(params.merge(format: "pdf")), :class => 'btn btn-secondary' %>
+          <%= link_to image_tag('/assets/img/excel.png') + " Excel", consumers_path(params.merge(format: "xls")), :class => 'btn btn-success' %>
+          <%= link_to image_tag('/assets/img/pdf.png') + " PDF", consumers_path(params.merge(format: "pdf")), :class => 'btn btn-success' %>
           
           </div>
           
@@ -61,7 +61,11 @@
               <td><% unless consumer.image.url.nil? %><%= image_tag consumer.image.url, :width=>"100" rescue nil %> <% else %> No Image <% end %></td>
               <td>
               
-              <%= link_to "Edit", main_app.edit_consumer_path(consumer), :class=>"btn" %>
+               <!-- <%= button_to "Accept", consumers_path, :method => "post" %>  -->
+
+
+              
+              <%= link_to "Edit", main_app.edit_consumer_path(consumer), :class=>"btn" %> 
               <%= link_to "Destroy",consumer,confirm: 'Are you sure?', :method =>:delete, :class=>"btn" %>
               </td>
               

@@ -332,16 +332,12 @@ h6 {
 [ Footer/ .footer ]
 */
 .footer {
-    background: none repeat scroll 0 0 #111111;
-    border-top: 1px solid #000000;
-    bottom: 0px;
-    box-shadow: 0 1px 0 #292929 inset;
-    color: #999999;
+    background: none repeat scroll 0 0 #ADD8E6;
+    border-top: 1px solid #7BB4C6;
+    color: #333333;
     font-size: 12px;
     margin-top: 0;
     padding: 15px 0;
-    position: fixed;
-    width: 100%;
 }
 .footer #footer-terms {
   text-align: right;
@@ -900,7 +896,7 @@ h6 {
   height: 45px;
   display: block;
   background: #222;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(56, 147, 177, 0.75);
   font-size: 16px;
   text-align: center;
   line-height: 45px;
@@ -964,7 +960,7 @@ h6 {
 .table-bordered thead tr th {
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 600;
   color: #444;
   border-left: 1px solid #F1F1F1;
@@ -1044,26 +1040,26 @@ h6 {
   border-right: none;
 }
 .table-highlight.table-bordered thead tr {
-  background-color: #4b4b4b;
-  background-image: -moz-linear-gradient(top, #555555, #3b3b3b);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#3b3b3b));
-  background-image: -webkit-linear-gradient(top, #555555, #3b3b3b);
-  background-image: -o-linear-gradient(top, #555555, #3b3b3b);
-  background-image: linear-gradient(to bottom, #555555, #3b3b3b);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff555555', endColorstr='#ff3b3b3b', GradientType=0);
+ background: #add8e6; /* Old browsers */
+background: -moz-linear-gradient(top, #add8e6 0%, #63c5e2 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#add8e6), color-stop(100%,#63c5e2)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #add8e6 0%,#63c5e2 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #add8e6 0%,#63c5e2 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #add8e6 0%,#63c5e2 100%); /* IE10+ */
+background: linear-gradient(to bottom, #add8e6 0%,#63c5e2 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#add8e6', endColorstr='#63c5e2',GradientType=0 ); /* IE6-9 */
 }
 .table-highlight.table-bordered thead th {
   color: #FFF;
-  border-right: 1px solid #2f2f2f;
-  border-left: 1px solid #6f6f6f;
-  -webkit-box-shadow: inset 0 1px 0 #888888;
-  -moz-box-shadow: inset 0 1px 0 #888888;
-  box-shadow: inset 0 1px 0 #888888;
+  border-right: 1px solid #549bb2;
+  border-left: 1px solid #d8eff6;
+  -webkit-box-shadow: inset 0 1px 0 #d8eff6;
+  -moz-box-shadow: inset 0 1px 0 #d8eff6;
+  box-shadow: inset 0 1px 0 #d8eff6;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .table-highlight.table-bordered {
-  border-top: 1px solid #1C2B37;
+  border-top: 1px solid #549BB2;
 }
 /*------------------------------------------------------------------
 [ Accordion / .accordion-group ]
