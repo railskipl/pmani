@@ -176,7 +176,7 @@ class ConsumersController < ApplicationController
   end
 
   def correct_user
-    redirect_to(root_path) unless current_user.role_id == Role.find(1).id
+    redirect_to(root_path) unless current_user.role_id != Role.find(2).id
   end
 
   
