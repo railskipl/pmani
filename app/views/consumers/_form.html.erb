@@ -27,13 +27,7 @@
             </ul>
             </div>
             <% end %>
-                <div class="control-group">
-                    <label for="inputName" class="control-label">
-                        Name</label>
-                    <div class="controls">
-                         <%= f.text_field :name %>
-                    </div>
-                </div>
+                
                
                 <div class="control-group">
                     <label for="inputEmail" class="control-label">
@@ -45,31 +39,14 @@
         
             <div class="control-group">
                         <label for="inputName" class="control-label">
-                           Sub Zone</label>
+                           MRU</label>
                         <div class="controls" id="subzone">
                             <%= render :partial => "consumers/subzone" %>
                         </div>
             </div>
 
 
-            <div class="control-group">
-                        <label for="inputName" class="control-label">
-                           Consumner Index No</label>
-                        <div class="controls">
-                           <%= f.text_field :consumer_inxex_no %>
-         
-                        </div>
-            </div>
             
-                   
-            <div class="control-group">
-                        <label for="inputName" class="control-label">
-                            Meter Number</label>
-                        <div class="controls">
-                            <%= f.text_field :meter_no %>
-                        </div>
-            </div>
-
             <div class="control-group">
                         <label for="inputBirthdate" class="control-label">
                             New Meter Number</label>
@@ -85,7 +62,42 @@
                            <%= f.text_field :current_meter_reading %>
                         </div>
             </div>
-            
+
+
+             <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Remarks</label>
+                        <div class="controls">
+                                 <%= f.text_field :remarks %>
+                        </div>
+            </div>
+
+            <div class="control-group">
+                    <label for="inputName" class="control-label">
+                      Name</label>
+                    <div class="controls">
+                         <%= f.text_field :name %>               
+                    </div>
+                </div>
+
+
+             <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Consumer Index No.</label>
+                        <div class="controls">
+                                 <%= f.text_field :consumer_inxex_no %>
+                        </div>
+            </div>
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          Meter No.</label>
+                        <div class="controls">
+                                 <%= f.text_field :meter_no %>
+                        </div>
+            </div>
+
+
             <div class="control-group">
                         <label for="inputAddress" class="control-label">
                           Meter Status</label>
@@ -96,75 +108,76 @@
 
             <div class="control-group">
                         <label for="inputAddress" class="control-label">
-                          Meter Status Description</label>
+                          Meter Status Desc</label>
                         <div class="controls">
-                                 <%= f.text_field :meter_status_desc %>
+                                <%= f.text_field :meter_status_desc %>
                         </div>
             </div>
 
-            <div class="control-group">
-                        <label for="inputAddress" class="control-label">
-                          Remarks</label>
-                        <div class="controls">
-                                 <%= f.text_field :remarks %>
-                        </div>
-            </div>
 
             <div class="control-group">
                         <label for="inputAddress" class="control-label">
-                          Contact Number</label>
+                          Contact No.</label>
                         <div class="controls">
-                                 <%= f.text_field :contact_no %>
+                                <%= f.text_field :contact_no %>
                         </div>
             </div>
+
 
             <div class="control-group">
                         <label for="inputAddress" class="control-label">
                           Walk ID</label>
                         <div class="controls">
-                                 <%= f.text_field :walk_id %>
+                                <%= f.text_field :walk_id %>
                         </div>
             </div>
 
-            <div class="control-group">
-                        <label for="inputAddress" class="control-label">
-                          Mr Name</label>
-                        <div class="controls">
-                                 <%= f.text_field :mr_name %>
-                        </div>
-            </div>
 
             <div class="control-group">
                         <label for="inputAddress" class="control-label">
-                          MR Code</label>
+                          mr_name</label>
                         <div class="controls">
-                                 <%= f.text_field :mr_code %>
+                                <%= f.text_field :mr_name %>
                         </div>
             </div>
-            
+
+
+            <div class="control-group">
+                        <label for="inputAddress" class="control-label">
+                          mr_code</label>
+                        <div class="controls">
+                                <%= f.text_field :mr_code %>
+                        </div>
+            </div>
+
+
+
             <div class="control-group">
                         <label for="inputAddress" class="control-label">
                           Billing Cycle</label>
                         <div class="controls">
-                                 <%= f.text_field :billing_cycle %>
+                                <%= f.text_field :billing_cycle%>
                         </div>
             </div>
-            
+
             <div class="control-group">
                         <label for="inputAddress" class="control-label">
-                          Address</label>
+                          Consumer Adress</label>
                         <div class="controls">
-                                 <%= f.text_area :consumer_address, :rows=>5, :cols=>5 %>
+                               <%= f.text_field :consumer_address, :rows=>5, :cols=>5 %>
                         </div>
             </div>
-            
+
             <div class="control-group">
                         <label for="inputAddress" class="control-label">
                           Category</label>
                         <div class="controls">
-                                 <%= f.text_field :category %>
+                               <%= f.text_field :category %>
                         </div>
             </div>
+
+
+
             
                                     
 

@@ -3,9 +3,11 @@
 
 <table class="table">
   <tr>
-    <th>Name</th>
-     <th>Zone</th> 
-     <th>Sub zone</th>
+              <th>Name</th>
+              <th>Zone</th>              
+              <th>MRU</th>
+              <th>Consumer Index No.</th>
+              <th>Current Reading</th>
     
   </tr>
 
@@ -14,6 +16,8 @@
     <td><%= consumer.name %></td>
     <td><%= consumer.zone.zone_name rescue nil %></td>
     <td><%= consumer.sub_zone.name rescue nil %></td>
+    <td><%= consumer.consumer_inxex_no rescue nil %></td>
+    <td><%= consumer.current_meter_reading rescue nil %></td>
    
   </tr>
 <% end %>
