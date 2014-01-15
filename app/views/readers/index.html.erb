@@ -46,9 +46,9 @@
     <td><%= reader.zone.zone_name rescue nil %></td>
     <td><%= reader.sub_zone.name rescue nil %></td>
     <td>
-      <%= link_to "Show",reader, :class=>"btn btn-success" %>
-      <%= link_to "Edit", main_app.edit_reader_path(reader), :class=>"btn btn-success" %>
-      <%= link_to "Destroy",reader,confirm: 'Are you sure?', method: :delete, :class=>"btn btn-success" %>
+      <%= link_to "Show",reader, :class=>"btn" %>
+      <%= link_to "Edit", main_app.edit_reader_path(reader), :class=>"btn" %>
+      <%= link_to "Destroy",reader,confirm: 'Are you sure?', method: :delete, :class=>"btn" %>
     </td>
 
     
