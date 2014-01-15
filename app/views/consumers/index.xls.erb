@@ -1,5 +1,5 @@
 
-<h3 class="form-signin-heading">Listing Consumers</h3>
+<h3 class="form-signin-heading">Consumers Readings</h3>
 
 <table class="table">
   <tr>
@@ -12,7 +12,7 @@
 <% @consumers.each do |consumer| %>
   <tr>
     <td><%= consumer.name %></td>
-    <td><%= consumer.sub_zone.zone.zone_name rescue nil %></td>
+    <td><%= consumer.zone.zone_name rescue nil %></td>
     <td><%= consumer.sub_zone.name rescue nil %></td>
    
   </tr>
